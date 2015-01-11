@@ -16,17 +16,21 @@ Calc.prototype = {
 				}
 				catch (e)
 				{
-					return e;
+					throw e;
 				}
 			}
 			else
 			{
-				return 'Input parameter not looks like the expression';
+				throw 'input parameter not looks like the expression';
 			}
 		}
 		else
 		{
-			return 'Input parameter must be value of string type';
+			throw 'input parameter must be value of string type';
 		}
+	},
+	defineOperator:function(expr)
+	{
+		return expr;
 	}
 }
